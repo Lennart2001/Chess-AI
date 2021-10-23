@@ -71,12 +71,6 @@ void engineMove() {
     board[get<2>(bestMove)][get<3>(bestMove)].update(get<2>(bestMove), get<3>(bestMove));
     board[get<0>(bestMove)][get<1>(bestMove)] = Piece();
     
-    cout << board[get<2>(bestMove)][get<3>(bestMove)].isEmpty << endl;
-    cout << board[get<2>(bestMove)][get<3>(bestMove)].isWhite << endl;
-    cout << board[get<2>(bestMove)][get<3>(bestMove)].symbol << endl;
-    cout << board[get<2>(bestMove)][get<3>(bestMove)].current_x << endl;
-    cout << board[get<2>(bestMove)][get<3>(bestMove)].current_y << endl;
-    
     printBoard();
 }
 
