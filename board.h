@@ -157,7 +157,6 @@ int evaluateBoard(Piece board[8][8]) {
                     } else {
                         evaluation -= pawn.getBoardValue(board[x][y].isWhite, x, y);
                     }
-//                    evaluation += pawn.getBoardValue(board[x][y].isWhite, x, y);
                     break;
                 }
                 case 'N': {
@@ -167,7 +166,6 @@ int evaluateBoard(Piece board[8][8]) {
                     } else {
                         evaluation -= knight.getBoardValue(board[x][y].isWhite, x, y);
                     }
-//                    evaluation += knight.getBoardValue(board[x][y].isWhite, x, y);
                     break;
                 }
                 case 'B': {
@@ -177,7 +175,6 @@ int evaluateBoard(Piece board[8][8]) {
                     } else {
                         evaluation -= bishop.getBoardValue(board[x][y].isWhite, x, y);
                     }
-//                    evaluation += bishop.getBoardValue(board[x][y].isWhite, x, y);
                     break;
                 }
                 case 'R': {
@@ -187,7 +184,6 @@ int evaluateBoard(Piece board[8][8]) {
                     } else {
                         evaluation -= rook.getBoardValue(board[x][y].isWhite, x, y);
                     }
-//                    evaluation += rook.getBoardValue(board[x][y].isWhite, x, y);
                     break;
                 }
                 case 'Q': {
@@ -197,7 +193,6 @@ int evaluateBoard(Piece board[8][8]) {
                     } else {
                         evaluation -= queen.getBoardValue(board[x][y].isWhite, x, y);
                     }
-//                    evaluation += queen.getBoardValue(board[x][y].isWhite, x, y);
                     break;
                 }
                 case 'K': {
@@ -207,7 +202,6 @@ int evaluateBoard(Piece board[8][8]) {
                     } else {
                         evaluation -= king.getBoardValue(board[x][y].isWhite, x, y);
                     }
-//                    evaluation += king.getBoardValue(board[x][y].isWhite, x, y);
                     break;
                 }
                 default: {
