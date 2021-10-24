@@ -835,6 +835,30 @@ void engineMove() {
     printBoard();
 }
 
+bool checkWinner(Piece board[8][8]) {
+    
+    bool wKing = false, bKing = false;
+    
+    for (int x = 0; x < 8; x++) {
+        for (int y = 0; y < 8; y++) {
+            if (board[x][y].symbol == 'K') {
+                if (board[x][y].isWhite) {
+                    wKing = true;
+                } else {
+                    bKing = true;
+                }
+            }
+        }
+    }
+    
+    if (wKing && bKing) {
+        return false;
+    } else {
+        return true;
+    }
+    
+}
+
 
 int main() {
     
@@ -844,10 +868,28 @@ int main() {
     
     while (true) {
         playerMove();
+        if (checkWinner(board)) {
+            break;
+        }
         
         engineMove();
         cout << -evaluateBoard(board) << endl;
         cout << calculations << endl;
+        if (checkWinner(board)) {
+            break;
+        }
+    }
+    
+    for (int x = 0; x < 8; x++) {
+        for (int y = 0; y < 8; y++) {
+            if (board[x][y].symbol == 'K') {
+                if (board[x][y].isWhite) {
+                    cout << "White Won This Game!\n";
+                } else {
+                    cout << "Black Won This Game!\n";
+                }
+            }
+        }
     }
     
     return 0;
