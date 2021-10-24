@@ -707,8 +707,7 @@ int AB_Prune(Piece board[8][8], int alpha, int beta, bool isMax, int depth) {
 // 1) FX, FY, TX, TY
 tuple<int, int, int, int> AB_Prune_Root(Piece board[8][8], int depth) {
     
-    int cur_val = -1000000;
-    int bestVal = -1000000;
+    int bestVal = INT_MIN;
     tuple<int, int, int, int> bestMove = {0,0,0,0};
     calculations = 0;
     
@@ -727,7 +726,7 @@ tuple<int, int, int, int> AB_Prune_Root(Piece board[8][8], int depth) {
                     board[get<0>(z)][get<1>(z)].update(get<0>(z), get<1>(z));
                     board[x][y] = Piece();
                     
-                    cur_val = AB_Prune(board, -100000, 100000, false, depth);
+                    int cur_val = AB_Prune(board, INT_MIN, INT_MAX, false, depth);
                     
                     // Reset Board to Original Position
                     board[x][y] = board[get<0>(z)][get<1>(z)];
@@ -834,8 +833,6 @@ void engineMove() {
     board[get<0>(bestMove)][get<1>(bestMove)] = Piece();
     
     printBoard();
-    cout << -evaluateBoard(board) << endl;
-    cout << calculations << endl;
 }
 
 
@@ -849,6 +846,8 @@ int main() {
         playerMove();
         
         engineMove();
+        cout << -evaluateBoard(board) << endl;
+        cout << calculations << endl;
     }
     
     return 0;
