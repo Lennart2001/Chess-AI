@@ -1,14 +1,14 @@
 //
 // main.cpp
 //
-// --- Version: 2.0.0 Caileb
+// --- Version: 2.0.0 
 //      --- Chess AI by Lennart Buhl
 // --- Created: 10/19/21
 //      --- By Lennart Buhl
 // --- Author:
 //      --- Lennart Buhl (Git - @Lennart2001)
 // --- Repository:
-//      --- https://github.com/Lennart2001/Caileb-2.0
+//      --- https://github.com/Lennart2001/Chess-AI
 // --- LinkedIn:
 //      --- https://www.linkedin.com/in/lennart-buhl
 //
