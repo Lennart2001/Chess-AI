@@ -1,4 +1,4 @@
-# How to run Caileb-2.0 through Terminal:
+# How to run Chess-AI through Terminal:
 
 
 $ git clone "https://github.com/Lennart2001/Chess-AI"
